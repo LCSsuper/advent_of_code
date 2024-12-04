@@ -3,8 +3,6 @@ import { parseFile } from "../../utils/parseFile.js";
 
 const lines = parseFile(path.join(process.cwd(), "data", "input.txt"));
 
-// mul\([0-9]{1,3},[0-9]{1,3}\)+
-
 const a = () => {
     let total = 0;
     for (const line of lines) {
