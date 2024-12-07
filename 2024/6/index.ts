@@ -1,4 +1,3 @@
-import fs from "fs";
 import path from "path";
 import { parseFile } from "../../utils/parseFile.js";
 
@@ -80,7 +79,7 @@ const b = () => {
     const obstructions = new Set<string>();
 
     for (const blockade of walked) {
-        const [X, Y] = blockade.split(",").map(Number);
+        const [X, Y] = blockade.split(",").map(parseInt);
         try {
             traverse(start(), 0, [X, Y]);
         } catch (e) {
