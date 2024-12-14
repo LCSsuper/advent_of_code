@@ -117,10 +117,6 @@ const test = (part: string) => {
                 ?.push(Number(["top", "bottom"].includes(side) ? x : y));
         }
 
-        // if (id === 5) {
-        //     console.log("🙃", sides);
-        // }
-
         let totalsides = 0;
         for (const coords of sides.values()) {
             totalsides += 1;
@@ -131,11 +127,6 @@ const test = (part: string) => {
 
             for (let i = 1; i < coords.length; i += 1) {
                 const diff = coords[i] - coords[i - 1];
-                if (diff < 1) {
-                    console.log("🙌", coords);
-                    console.log("👩‍👧‍👦", diff);
-                }
-
                 if (diff > 1) {
                     totalsides += 1;
                 }
@@ -149,8 +140,5 @@ const test = (part: string) => {
     console.log(total);
 };
 
-// higher than 881656
-// lower than 927584
-
-// test("a");
+test("a");
 test("b");
